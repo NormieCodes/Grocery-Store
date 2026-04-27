@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useToast } from "../src/context/ToastContext";
 
 function Contact() {
   const [form, setForm] = useState({
@@ -6,6 +7,8 @@ function Contact() {
     email: "",
     message: ""
   });
+  
+  const { showToast } = useToast();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,6 +22,7 @@ function Contact() {
     e.preventDefault(); 
 
     console.log(form);
+    showToast("Thank you for your feedback");
 
     setForm({
       name: "",

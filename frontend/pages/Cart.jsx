@@ -1,7 +1,9 @@
 import { useCart } from "../src/context/CartContext";
+import { useToast } from "../src/context/ToastContext";
 
 function Cart() {
   const { orders, updateCart, clearCart } = useCart();
+  const { showToast } = useToast();
   // totals
   const subtotal = orders.reduce(
     (sum, item) => sum + item.price * item.qty,
@@ -21,7 +23,7 @@ function Cart() {
   const finalTotal = discountedTotal + tax;
 
   const handleCheckout = () => {
-    alert("Order placed. Thank you!");
+    showToast("Order placed successfully!");
     clearCart();
   };
 
