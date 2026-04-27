@@ -1,7 +1,7 @@
 import pfp from '../src/assets/pfp.jpeg';
 import { Link } from 'react-router';
 
-function Navbar () {
+function Navbar ( { setSearch }) {
 	return (
 		<>
 			<nav className="flex justify-between fixed z-50 w-full border-b-2 border-white items-center h-20 bg-black">
@@ -10,7 +10,10 @@ function Navbar () {
 				</div>
 				<div className="nav-right">
 					<ul className="flex items-center justify-end gap-6 p-4 text-md font-mono font-bold">
-						<li><input type="text" placeholder="Search" 
+						<li><input 
+						type="text" 
+						placeholder="Search" 
+						onChange={(e) => setSearch(e.target.value)}
 						className="border-b-2 border-white p-2 bg-gray-950 rounded-lg outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-4 focus:ring-offset-slate-950 hover:border-yellow-500 focus:border-b-yellow-500 transition-all duration-200 ease-in-out" maxLength={36}/></li>
 
 						<li className="border-b-2 hover:border-yellow-500 p-2 border-transparent transition- duration-150 ease-in-out"><Link to="/">Home</Link></li>
