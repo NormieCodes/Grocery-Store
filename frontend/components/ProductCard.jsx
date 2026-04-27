@@ -7,7 +7,7 @@ function ProductCard({ product }) {
   const qty = orders.find(o => o.id === product.id)?.qty || 0;
 
   return (
-    <div className="border border-slate-700 hover:border-yellow-500 hover:bg-linear-to-br from-yellow-700  flex flex-col p-3 rounded-xl">
+    <div className="border border-slate-700/2 hover:border-yellow-500 hover:bg-linear-to-br from-yellow-700 bg-white/20 backdrop-blur-2xl flex flex-col p-3 rounded-xl">
 
   {/* Image */}
   <div className="bg-white text-black h-36 w-full flex items-center justify-center rounded-lg overflow-hidden select-none">
