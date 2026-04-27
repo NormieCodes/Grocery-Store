@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../src/services/api";
 import ProductCard  from '../components/ProductCard.jsx';
+import Contact from "../components/Contact.jsx";
 
 function Home() {
 	const [products, setProducts] = useState([]);
@@ -38,6 +39,7 @@ function Home() {
 			}
 		</main>
     );
+		<Contact />
 }
 
 export default Home;

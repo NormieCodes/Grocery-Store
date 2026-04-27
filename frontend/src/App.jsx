@@ -4,7 +4,6 @@ import Home from '../pages/Home.jsx';
 import Cart from '../pages/Cart.jsx';
 import '../style/App.css';
 import CartBar from '../components/CartBar.jsx';
-
 function App() {
   return (
     <>
